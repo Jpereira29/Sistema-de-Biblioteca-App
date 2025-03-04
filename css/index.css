@@ -83,4 +83,52 @@ main {
   margin-right: 5px;
 }
 
+#table-container {
+  margin: 20px 0;
+  margin: 0 auto;
+}
 
+#table-container h2 {
+  margin: 20px 0px;
+  text-align: center;
+  color: #FFF;
+  background-color: #2C3E50;
+  padding: 10px 0;
+  border-radius: 10px;
+  max-width: 350px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #2C3E50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #F2F2F2;
+}
+
+tr:hover {
+  background-color: #EAEAEA;
+}
+
+tr td a {
+  display: block;
+  text-align: center;
+}
