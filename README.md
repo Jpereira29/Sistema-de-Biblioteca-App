@@ -1,15 +1,75 @@
-# App Sistema de Biblioteca
-<a href="https://www.figma.com/proto/ZkqJwrSPT11hg26zTv61Ma/Interface-Sistema-de-biblioteca?node-id=8-62&p=f&t=4jqX5hJbfqlvfGFj-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A62">
-  Visualizar no Figma
-</a>
+# Nuxt Minimal Starter
 
-## Screenshots
-![Interface Sistema de biblioteca (1)](https://github.com/user-attachments/assets/dd821a26-85c0-457c-84e5-9591b4bc3c82)
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Equipe
-<ul>
-<li>CICERO JEFERSON SANTOS DE ARAÚJO - 2023011591</li>
-<li>FRANCISCO AIRTON ARAUJO JUNIOR - 2023010960</li>
-<li>JORGE PEREIRA DE OLIVEIRA - 2023011027</li>
-<li>RAFAEL GUIMARAES JANUARIO - 2023010600</li>
-</ul>
+## Setup
+
+Make sure to install dependencies:
+
+```bash
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
