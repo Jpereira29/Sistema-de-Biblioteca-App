@@ -3,7 +3,7 @@
     <DataTable
       :model="model"
       :headers="headers"
-      url="/Usuario"
+      url="/TipoUsuario"
       showActions
       form-title="Cadastro de usuários"
       @items="items = $event"
@@ -43,10 +43,6 @@
           />
         </v-row>
       </template>
-
-      <template #item.tipoUsuario="{ item }">
-        <v-chip>{{ item.tipoUsuario.tipo }}</v-chip>
-      </template>
     </DataTable>
   </div>
 </template>
@@ -58,28 +54,8 @@ const items = ref([]);
 
 const headers = [
   {
-    title: "Nome",
-    key: "nome",
-    icon: "mdi-cash",
-  },
-  {
-    title: "Telefone1",
-    key: "telefone1",
-    icon: "mdi-cash",
-  },
-  {
-    title: "Telefone2",
-    key: "telefone2",
-    icon: "mdi-cash",
-  },
-  {
-    title: "Email",
-    key: "email",
-    icon: "mdi-cash",
-  },
-  {
     title: "TipoUsuario",
-    key: "tipoUsuario",
+    key: "tipo",
     icon: "mdi-cash",
   },
   {

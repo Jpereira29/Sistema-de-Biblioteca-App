@@ -247,13 +247,15 @@ const saveItem = async () => {
 
 const updateItem = async () => {
   try {
-    await $axios.put(props.url, model.value).then(async (response) => {
-      if (response.status === 200) {
-        dialog.value = false;
-        editedItem.value = false;
-        await getItems();
-      }
-    });
+    await $axios
+      .put(`${props.url}/${model.value.id}`, model.value)
+      .then(async (response) => {
+        if (response.status === 200) {
+          dialog.value = false;
+          editedItem.value = false;
+          await getItems();
+        }
+      });
   } catch (error) {
     console.error(error);
   } finally {
@@ -269,7 +271,7 @@ const handleDeleteItem = (item: any) => {
 const deleteItem = async () => {
   try {
     await $axios
-      .delete(props.url, { data: deleteModel.value })
+      .delete(`${props.url}/${deleteModel.value.id}`)
       .then(async (response) => {
         if (response.status === 200) {
           dialogModal.value = false;

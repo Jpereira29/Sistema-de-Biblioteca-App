@@ -42,5 +42,10 @@ const items = ref([
     title: "Livros",
     page: "books",
   },
+  {
+    icon: "mdi-bookshelf",
+    title: "Autores",
+    page: "authors",
+  }
 ]);
 </script>

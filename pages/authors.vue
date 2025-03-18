@@ -3,7 +3,7 @@
     <DataTable
       :model="model"
       :headers="headers"
-      url="/Livro"
+      url="/Autor"
       showActions
       form-title="Cadastro de usuários"
       @items="items = $event"
@@ -13,34 +13,13 @@
     >
       <template #form="{ model }">
         <v-row>
-          <TextField v-model="model.titulo" label="Nome" name="titulo" required />
           <TextField
-            v-model="model.categoria"
-            label="Categoria"
-            name="categoria"
+            v-model="model.nome"
+            label="Nome"
+            name="Nome"
             required
-          />
-          <TextField
-            v-model="model.anoPublicacao"
-            label="Ano Publicação"
-            name="anoPublicacao"
-            required
-          />
-          <ComboboxMultiple
-            v-model="model.autores"
-            url="/Autor"
-            item-title="nome"
-            item-value="id"
-            label="Autores"
-            name="Autores"
-            required
-            multiple
           />
         </v-row>
-      </template>
-
-      <template #item.tipoUsuario="{ item }">
-        <v-chip>{{ item.tipoUsuario.tipo }}</v-chip>
       </template>
     </DataTable>
   </div>
@@ -54,22 +33,7 @@ const items = ref([]);
 const headers = [
   {
     title: "Nome",
-    key: "titulo",
-    icon: "mdi-cash",
-  },
-  {
-    title: "Categoria",
-    key: "categoria",
-    icon: "mdi-cash",
-  },
-  {
-    title: "Ano Publicação",
-    key: "anoPublicacao",
-    icon: "mdi-cash",
-  },
-  {
-    title: "Autor",
-    key: "autor",
+    key: "nome",
     icon: "mdi-cash",
   },
   {
