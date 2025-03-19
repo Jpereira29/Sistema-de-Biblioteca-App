@@ -5,7 +5,7 @@
       :headers="headers"
       url="/Livro"
       showActions
-      form-title="Cadastro de usuários"
+      form-title="Cadastro de livro"
       @items="items = $event"
       @editItem="editItem"
       @cancel="model = {}"
@@ -13,7 +13,12 @@
     >
       <template #form="{ model }">
         <v-row>
-          <TextField v-model="model.titulo" label="Nome" name="titulo" required />
+          <TextField
+            v-model="model.titulo"
+            label="Nome"
+            name="titulo"
+            required
+          />
           <TextField
             v-model="model.categoria"
             label="Categoria"
@@ -39,15 +44,14 @@
         </v-row>
       </template>
 
-      <template #item.tipoUsuario="{ item }">
-        <v-chip>{{ item.tipoUsuario.tipo }}</v-chip>
+      <template #item.autores="{ item }">
+        <v-chip v-for="autor in item.autores">{{ autor.nome }}</v-chip>
       </template>
     </DataTable>
   </div>
 </template>
 
 <script lang="ts" setup>
-
 const model = ref({});
 const items = ref([]);
 
@@ -68,8 +72,8 @@ const headers = [
     icon: "mdi-cash",
   },
   {
-    title: "Autor",
-    key: "autor",
+    title: "Autores",
+    key: "autores",
     icon: "mdi-cash",
   },
   {

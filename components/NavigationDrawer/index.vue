@@ -43,7 +43,7 @@ const items = ref([
     page: "books",
   },
   {
-    icon: "mdi-bookshelf",
+    icon: "mdi-account-box",
     title: "Autores",
     page: "authors",
   }
