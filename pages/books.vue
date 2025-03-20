@@ -45,7 +45,7 @@
       </template>
 
       <template #item.autores="{ item }">
-        <v-chip v-for="autor in item.autores">{{ autor.nome }}</v-chip>
+        <v-chip v-for="autor in item.autores" class="mr-1">{{ autor.nome }}</v-chip>
       </template>
     </DataTable>
   </div>

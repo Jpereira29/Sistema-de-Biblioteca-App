@@ -5,7 +5,7 @@
       :headers="headers"
       url="/Autor"
       showActions
-      form-title="Cadastro de usuários"
+      form-title="Cadastro de autores"
       @items="items = $event"
       @editItem="editItem"
       @cancel="model = {}"

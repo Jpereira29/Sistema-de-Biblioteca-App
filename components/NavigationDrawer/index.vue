@@ -29,13 +29,13 @@ const items = ref([
   },
   {
     icon: "mdi-account",
-    title: "Usuários",
-    page: "users",
+    title: "Clientes",
+    page: "clients",
   },
   {
     icon: "mdi-account-group",
-    title: "Usuários Tipo",
-    page: "user-types",
+    title: "Tipos de Clientes",
+    page: "clients-types",
   },
   {
     icon: "mdi-bookshelf",

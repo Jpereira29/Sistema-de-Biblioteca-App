@@ -3,9 +3,9 @@
     <DataTable
       :model="model"
       :headers="headers"
-      url="/Usuario"
+      url="/Cliente"
       showActions
-      form-title="Cadastro de usuários"
+      form-title="Cadastro de clientes"
       @items="items = $event"
       @editItem="editItem"
       @cancel="model = {}"
@@ -33,19 +33,19 @@
             required
           />
           <Combobox
-            v-model="model.tipoUsuarioId"
-            url="/TipoUsuario"
+            v-model="model.tipoClienteId"
+            url="/TipoCliente"
             item-title="tipo"
             item-value="id"
-            label="TipoUsuario"
-            name="tipoUsuario"
+            label="Tipo cliente"
+            name="tipoCliente"
             required
           />
         </v-row>
       </template>
 
-      <template #item.tipoUsuario="{ item }">
-        <v-chip>{{ item.tipoUsuario.tipo }}</v-chip>
+      <template #item.tipoCliente="{ item }">
+        <v-chip>{{ item.tipoCliente.tipo }}</v-chip>
       </template>
     </DataTable>
   </div>
@@ -78,8 +78,8 @@ const headers = [
     icon: "mdi-cash",
   },
   {
-    title: "TipoUsuario",
-    key: "tipoUsuario",
+    title: "Tipo cliente",
+    key: "tipoCliente",
     icon: "mdi-cash",
   },
   {

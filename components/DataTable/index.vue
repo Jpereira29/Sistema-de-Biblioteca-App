@@ -35,7 +35,7 @@
         <div v-if="showForm" class="mr-auto ml-4">
           <v-btn
             density="comfortable"
-            color="green_600"
+            color="primary"
             text="Adicionar"
             class="text-capitalize font-weight-bold mr-4"
             @click="addItem"
@@ -56,7 +56,7 @@
       <CardInfo v-for="item in itemsPaginated" :headers="headers" :item="item">
         <template v-if="props.showActions" #item.actions>
           <v-btn
-            color="green_600"
+            color="primary"
             density="comfortable"
             icon="mdi-pencil"
             class="mr-1"
@@ -231,6 +231,7 @@ const addItem = () => {
 };
 
 const saveItem = async () => {
+  loadingSaveBtn.value = true;
   try {
     await $axios.post(props.url, model.value).then(async (response) => {
       if (response.status === 200) {

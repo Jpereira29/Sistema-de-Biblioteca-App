@@ -1,10 +1,10 @@
 <template>
   <v-col class="d-flex justify-center align-center mt-12">
     <v-card width="450">
-      <v-card-title class="text-center font-weight-bold text-green_600"
+      <v-card-title class="text-center font-weight-bold text-primary"
         >Login</v-card-title
       >
-      <v-img src="" height="220" contain></v-img>
+      <v-img src="/images/logo.svg" height="220" class="ma-2" contain></v-img>
       <v-card-text>
         <v-text-field
           v-model="data.userName"
@@ -29,7 +29,7 @@
         <v-btn
           width="100%"
           class="font-weight-bold"
-          color="green_600"
+          color="primary"
           @click="login"
           :loading="loading"
           >Login</v-btn

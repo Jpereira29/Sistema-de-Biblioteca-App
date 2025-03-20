@@ -3,9 +3,9 @@
     <DataTable
       :model="model"
       :headers="headers"
-      url="/TipoUsuario"
+      url="/TipoCliente"
       showActions
-      form-title="Cadastro de usuários"
+      form-title="Cadastro de clientes"
       @items="items = $event"
       @editItem="editItem"
       @cancel="model = {}"
@@ -13,34 +13,7 @@
     >
       <template #form="{ model }">
         <v-row>
-          <TextField v-model="model.nome" label="Nome" name="nome" required />
-          <TextField
-            v-model="model.telefone1"
-            label="Telefone1"
-            name="telefone1"
-            required
-          />
-          <TextField
-            v-model="model.telefone2"
-            label="Telefone2"
-            name="telefone2"
-            required
-          />
-          <TextField
-            v-model="model.email"
-            label="Email"
-            name="email"
-            required
-          />
-          <Combobox
-            v-model="model.tipoUsuarioId"
-            url="/TipoUsuario"
-            item-title="tipo"
-            item-value="id"
-            label="TipoUsuario"
-            name="tipoUsuario"
-            required
-          />
+          <TextField v-model="model.tipo" label="Tipo" name="tipo" required />
         </v-row>
       </template>
     </DataTable>
@@ -48,13 +21,12 @@
 </template>
 
 <script lang="ts" setup>
-
 const model = ref({});
 const items = ref([]);
 
 const headers = [
   {
-    title: "TipoUsuario",
+    title: "Tipo Cliente",
     key: "tipo",
     icon: "mdi-cash",
   },
